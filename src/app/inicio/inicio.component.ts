@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import { User, UserService } from '../user.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,13 +8,13 @@ import { UserService } from '../user.service';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  constructor(
-    public user: UserService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  user: User = {} as User;
+  constructor(public userService: UserService, private router: Router) {
+    this.user = userService.user;
+  }
 
   ngOnInit(): void {}
+
   gotoAccount() {
     this.router.navigate(['account']);
   }

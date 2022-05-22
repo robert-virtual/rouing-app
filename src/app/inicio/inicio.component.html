@@ -1,4 +1,11 @@
-<p>inicio works!</p>
+<p>{{ user.name }}</p>
+<p>{{ user.age }}</p>
+<p>Hobbies</p>
+<hr />
+<ol>
+  <li *ngFor="let hobbie of user.hobbies">{{ hobbie }}</li>
+</ol>
+<hr />
 <input type="text" placeholder="name" [(ngModel)]="user.name" />
-<pre>{{ user | json }}</pre>
+<input type="number" placeholder="age" [(ngModel)]="user.age" />
 <button (click)="gotoAccount()">Account</button>

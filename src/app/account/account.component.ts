@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { User, UserService } from '../user.service';
 
 @Component({
   selector: 'app-account',
@@ -8,7 +8,10 @@ import { UserService } from '../user.service';
   styleUrls: ['./account.component.css'],
 })
 export class AccountComponent implements OnInit {
-  constructor(public user: UserService, private router: Router) {}
+  user: User = {} as User;
+  constructor(public userService: UserService, private router: Router) {
+    this.user = userService.user;
+  }
 
   ngOnInit(): void {}
 }

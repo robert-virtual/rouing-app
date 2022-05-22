@@ -6,7 +6,7 @@ import { InicioComponent } from '../inicio/inicio.component';
 import { ProductsComponent } from '../products/products.component';
 const routes: Routes = [
   {
-    path: '',
+    path: 'inicio',
     component: InicioComponent,
   },
   {
@@ -20,6 +20,11 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/inicio',
+    pathMatch: 'full',
   },
 ];
 @NgModule({

@@ -11,3 +11,6 @@ nav {
 main {
   padding: 1rem;
 }
+.active {
+  color: orange;
+}

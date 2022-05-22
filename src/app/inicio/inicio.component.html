@@ -9,3 +9,11 @@
 <input type="text" placeholder="name" [(ngModel)]="user.name" />
 <input type="number" placeholder="age" [(ngModel)]="user.age" />
 <button (click)="gotoAccount()">Account</button>
+<hr />
+<h2>Pipes</h2>
+<p>{{ base }}^{{ exponente }}: {{ base | exponential: exponente }}</p>
+<input type="text" placeholder="base" [(ngModel)]="base" />
+<input type="text" placeholder="exponente" [(ngModel)]="exponente" />
+<h2>Local Storage</h2>
+<hr />
+<p>{{ user | save: "user-angular" }}</p>

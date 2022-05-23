@@ -9,6 +9,7 @@ nav {
   box-shadow: 0 0 6px gray;
 }
 main {
+  position: relative;
   padding: 1rem;
 }
 .active {

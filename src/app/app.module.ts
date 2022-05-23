@@ -10,7 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
 import { ExponentialPipe } from './exponential.pipe';
 import { SavePipe } from './save.pipe';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,12 @@ import { SavePipe } from './save.pipe';
     ExponentialPipe,
     SavePipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

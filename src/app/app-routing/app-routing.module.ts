@@ -8,18 +8,22 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: InicioComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: 'products',
     component: ProductsComponent,
+    data: { animation: 'isRight' },
   },
   {
     path: 'account',
     component: AccountComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: 'about',
     component: AboutComponent,
+    data: { animation: 'isRight' },
   },
   {
     path: '',

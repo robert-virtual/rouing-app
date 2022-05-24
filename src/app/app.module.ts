@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ExponentialPipe } from './exponential.pipe';
 import { SavePipe } from './save.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InicioComponent,
     ExponentialPipe,
     SavePipe,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
